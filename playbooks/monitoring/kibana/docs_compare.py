@@ -110,7 +110,7 @@ for doc_type in internal_doc_types:
 
     # Certain fields are expected to be optional, as they depend on the time of collection. We omit those from the comparison.
     optional_fields = [
-        "kibana_stats.response_times.average"
+        "kibana_stats.response_times.average", "kibana_stats.usage.maps.timeCaptured", "kibana_stats.timestamp", "timestamp", "kibana_stats.usage.ui_metric"
     ]
     remove_optional_fields(internal_doc, optional_fields)
     remove_optional_fields(metricbeat_doc, optional_fields)
@@ -149,3 +149,4 @@ for doc_type in internal_doc_types:
         log_parity_error("Metricbeat-indexed doc for type='" + doc_type + "' has unexpected deletions. Difference: " + json.dumps(difference, indent=2))
 
     log_ok("Metricbeat-indexed doc for type='" + doc_type + "' has expected parity with internally-indexed doc.")
+
