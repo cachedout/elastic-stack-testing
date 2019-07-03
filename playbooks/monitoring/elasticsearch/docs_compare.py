@@ -115,7 +115,7 @@ metricbeat_doc_types = get_doc_types(metricbeat_docs_path)
 if len(internal_doc_types) > len(metricbeat_doc_types):
     diff_elements = set(internal_doc_types) - set(metricbeat_doc_types)
     log_parity_error("Found more internally-indexed document types than metricbeat-indexed document types.\n \
-            Elements which appear in the internal collector but not in Metricbeat:{}\n".format(pprint.pformat(diff_elements)))
+            Document types indexed by internal collection but not by Metricbeat collection: {}\n".format(pprint.pformat(diff_elements)))
 
 for doc_type in internal_doc_types:
     internal_doc = get_doc(internal_docs_path, doc_type)
