@@ -8,7 +8,11 @@ from docs_compare_util import check_parity
 allowed_deletions_from_metricbeat_docs_extra = [
   # 'path.to.field'
   'kibana_stats.response_times.max',
-  'kibana_stats.response_times.average'
+  'kibana_stats.response_times.average',
+  'kibana_stats.usage.visualization_types',
+  'kibana_stats.usage.maps.attributesPerMap',
+  'kibana_stats.usage.maps.mapsTotalCount',
+  'kibana_stats.usage.maps.timeCaptured'
 ]
 
 def handle_special_case_kibana_settings(internal_doc, metricbeat_doc):
