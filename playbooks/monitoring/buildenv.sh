@@ -6,7 +6,7 @@
 export AIT_RUN_LOCAL=true
 
 # Build URL
-export ES_BUILD_URL=
+export ES_BUILD_URL=snapshots.elastic.co/8.0.0-4b028b4b
 
 # Build Type 
 export ES_BUILD_OSS=false
