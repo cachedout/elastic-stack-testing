@@ -136,6 +136,7 @@
             - ml_job
             - node_stats
             - shard
+            - enrich
             period: 10s
             hosts: ["https://{{ current_host_ip }}:{{ elasticsearch_port }}"]
             ssl.verification_mode: none
